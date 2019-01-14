@@ -41,7 +41,7 @@ class Pages extends CI_Controller
                   $this->load->library('email', $emailsetup);
                   $this->email->initialize($emailsetup); 
                   $this->email->from($this->input->post('contact'));
-                  $this->email->to($emailsetup['username']);
+                  $this->email->to($emailsetup['smtp_user']);
                   $this->email->subject('Contact Form');
                   $this->email->message($message);
                   if($this->email->send())
@@ -192,7 +192,7 @@ class Pages extends CI_Controller
                           $to_email = $fields['user_email'];
                           $subject = 'Registration';
                           $this->email->initialize($emailsetup); 
-                          $this->email->from($emailsetup['smtp_user'], 'Saai Holidays');
+                          $this->email->from($emailsetup['smtp_user'], 'Oozaaoo Club');
                           $this->email->to($to_email);
                           $this->email->subject($subject);
                           $this->email->message($message);
@@ -201,16 +201,16 @@ class Pages extends CI_Controller
                         if($this->email->send())
                         {
                             $message = $this->load->view('admin/register_admin_confirmation',$fields,TRUE); 
-                            $this->email->from($emailsetup['smtp_user'], 'Saai Holidays');
-                            $this->email->to($to_email);
+                            $this->email->from($emailsetup['smtp_user'], 'Oozaaoo Club');
+                            $this->email->to($emailsetup['smtp_user']);
                             $this->email->subject($subject);
                             $this->email->message($message);
                             if($this->email->send())
                             {
-                                $this->load->view('pages/sendsms');
-                                $sendsms = new Sendsms("http://alerts.maxwellsms.com/api", "A5e24450f7e3297df048b257204e76d89", "SaaiRG");
-                                $text="Successfully registered with Saai Holidays.Please use the login details username:".$result." Password:".$fields['user_password']." OTP:".$resOTP;
-                                $sendsms->send_sms($fields['user_mobile'], $text,'json');
+                                // $this->load->view('pages/sendsms');
+                                // $sendsms = new Sendsms("http://alerts.maxwellsms.com/api", "A5e24450f7e3297df048b257204e76d89", "SaaiRG");
+                                // $text="Successfully registered with Oozaaoo Club.Please use the login details username:".$result." Password:".$fields['user_password']." OTP:".$resOTP;
+                                // $sendsms->send_sms($fields['user_mobile'], $text,'json');
                                 $this->form_validation->clear_field_data();
                                 $data['error_message'] = "User Added Successfully!";      
                             }

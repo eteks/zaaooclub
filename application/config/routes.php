@@ -58,7 +58,7 @@ $route['saai'] = 'pages/common/saai';
 $route['about'] = 'pages/common/about';
 $route['gallery'] = 'pages/common/gallery';
 $route['contacts'] = 'pages/common/contact';
-// $route['admin/add_users'] = 'admin/users/add_primary_users';
+$route['admin/add_users'] = 'admin/users/add_primary_users/';
 
 //Route url for admin
 $route['admin'] = 'admin/login/index_login';

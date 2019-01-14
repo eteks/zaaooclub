@@ -48,7 +48,7 @@
                 <div class="container-size">
  
   
-<form role="form" method="POST" action="<?php echo base_url(); ?>saai" class="" name="edit_enduser_form" id="edit_enduser_form" enctype="multipart/form-data">
+ <form role="form" method="POST" action="<?php echo base_url(); ?>admin/users/add_primary_users" class="form_submit" name="edit_enduser_form" id="edit_enduser_form">
 
     <h4 class="heading3">Basic Details</h4>
       <div class="row">
