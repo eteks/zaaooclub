@@ -220,7 +220,7 @@ if (isset($this->session->userdata['log_in']))
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#step4" role="tab" aria-controls="step4" aria-selected="false">Package</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#step5" role="tab" aria-controls="step5" aria-selected="false">Payment</a>
+    <a class="nav-link" id="pay-tab" data-toggle="tab" href="#step5" role="tab" aria-controls="step5" aria-selected="false">Payment</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#step6" role="tab" aria-controls="step6" aria-selected="false">Summary</a>
@@ -418,13 +418,13 @@ if (isset($this->session->userdata['log_in']))
       <div class="check"id="hiddenSouth" style="display: none;" >
 <label class="label_fun">Mode of Transport</label>
  <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button mot" name="mode_of_transport"  value="bus"> Bus</label>
- <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button" name="south_transport"  value="Train">Train</label>
+ <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button" name="mode_of_transport"  value="Train">Train</label>
 </div>
 <div class="check"id="hiddenNorth" style="display: none;" >
 <label class="label_fun">Mode of Transport</label>
- <label class="gender"><input type="radio" onchange="showNbus(this.checked)" class="option-input radio_button" name="mode_of_transport"  value="Flight"> Flight</label>
+ <label class="gender"><input type="radio" onchange="showNbus(this.checked)" class="option-input radio_button north_transport" name="mode_of_transport"  value="Flight"> Flight</label>
         
-  <label class="gender"><input type="radio" onchange="showTrain(this.checked)" class="option-input radio_button" name="mode_of_transport"  value="Train">Train</label>
+  <label class="gender"><input type="radio" onchange="showTrain(this.checked)" class="option-input radio_button north_transport" name="mode_of_transport"  value="Train">Train</label>
  </div>
 <div class="check"id="hiddenInter" style="display: none;" >
 <label class="label_fun">Mode of Transport</label>
@@ -448,26 +448,26 @@ if (isset($this->session->userdata['log_in']))
 <label class="label_fun">Payment Option</label>  
 
 ------------------------------------
- <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullSouth(this.checked)" name="payment"  value="val1" checked> Full Rs.<span id="pSfP"></span></label>
-  <label class="gender"><input type="radio" class="option-input radio_button" onchange="showemiSouth(this.checked)" name="payment"  value="val2" checked> EMI Rs.<span id="pSeP"></span></label>
+<label class="gender"><input type="radio" class="option-input radio_button cPV" id="pSfPV" onchange="showfullSouth(this.checked)" name="payment" checked> Full Rs.<span id="pSfP"></span></label>
+  <label class="gender"><input type="radio" class="option-input radio_button cPV" id="pSePV" onchange="showemiSouth(this.checked)" name="payment" checked> EMI Rs.<span id="pSeP"></span></label>
 </div>
 <div class="check"id="paymentNorth1" style="display: none;" >
 <label class="label_fun">Payment Option</label>
- <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullNorth1(this.checked)" name="payment"  value="option1"> Full Rs.<span id="pN1fP"></span></label>
-  <label class="gender"><input type="radio" onchange="showemiNorth1(this.checked)" class="option-input radio_button" name="payment"  value="option2"> EMI Rs.<span id="pN1eP"></span></label>
+ <label class="gender"><input type="radio" class="option-input radio_button cPV" id="pN1fPV" onchange="showfullNorth1(this.checked)" name="payment"> Full Rs.<span id="pN1fP"></span></label>
+  <label class="gender"><input type="radio" onchange="showemiNorth1(this.checked)" class="option-input radio_button cPV" id="pN1ePV" name="payment"> EMI Rs.<span id="pN1eP"></span></label>
         
    </div>
 <div class="check"id="paymentNorth2" style="display: none;" >
 <label class="label_fun">Payment Option</label>
 
-   <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullNorth2(this.checked)" name="payment"  value="value1" checked> Full Rs.<span id="pN2fP"></span></label>
-    <label class="gender"><input type="radio" onchange="showemiNorth2(this.checked)" class="option-input radio_button" name="payment"  value="value2" checked> EMI Rs.<span id="pN2eP"></span></label>
+  <label class="gender"><input type="radio" class="option-input radio_button cPV" id="pN2fPV" onchange="showfullNorth2(this.checked)" name="payment" checked> Full Rs.<span id="pN2fP"></span></label>
+    <label class="gender"><input type="radio" onchange="showemiNorth2(this.checked)" id="pN2ePV" class="option-input radio_button cPV" name="payment" checked> EMI Rs.<span id="pN2eP"></span></label>
   </div>
   <div class="check"id="paymentInter" style="display: none;" >
 <label class="label_fun">Payment Option</label>
 
-   <label class="gender"><input type="radio" onchange="showfullInter(this.checked)" class="option-input radio_button" name="payment"  value="valu1" checked> Full Rs.<span id="pIfP"></span></label>
-    <label class="gender"><input type="radio" onchange="showemiInter(this.checked)" class="option-input radio_button" name="payment"  value="valu2" checked> EMI Rs.<span id="pIeP"></span></label>
+ <label class="gender"><input type="radio" onchange="showfullInter(this.checked)" class="option-input radio_button cPV" id="pIfPV" name="payment" checked> Full Rs.<span id="pIfP"></span></label>
+    <label class="gender"><input type="radio" onchange="showemiInter(this.checked)" class="option-input radio_button cPV" id="pIePV" name="payment" checked> EMI Rs.<span id="pIeP"></span></label>
   </div>
     </div>
     <div class="col">
@@ -499,16 +499,13 @@ if (isset($this->session->userdata['log_in']))
 </div>
 </form>
 </div>
-
-
-
-
-   
 <script>
     $(document).ready(function(){
-        $('#user_dob').datepicker({format: 'yyyy-mm-dd'})
-         $('input[type=radio][name=package]').change(function() {
+        $('#user_dob').datepicker({format: 'yyyy-mm-dd'});
+
+        $('input[type=radio][name=package]').change(function() {
           $('.mot').prop('checked', false);
+          //$(".cPV").val('');
         });
 
         $("#pay-tab").click(function (e) {
@@ -521,9 +518,9 @@ if (isset($this->session->userdata['log_in']))
               age--;
           }
           var packageValue = $("input[name='package']:checked").val();
-          var packageNTransValue = $("input[name='north_transport']:checked").val();
+          var packageNTransValue = $("input:radio.north_transport:checked").val();
           var nTransValue;
-          if(packageNTransValue == "flight"){
+          if(packageNTransValue == "Flight"){
             nTransValue = 1;
           }
           else{
@@ -534,39 +531,56 @@ if (isset($this->session->userdata['log_in']))
             if(packageValue == "south"){
               discValue = parseInt(6000) - parseInt(6000 * 0.4);
               $("#pSfP").text(discValue);
+              $("#pSfPV").val(discValue);
               $("#pSeP").text(500);
+              $("#pSePV").val(500);
             }else if(packageValue == "north"){
               discValue = parseInt(12000) - parseInt(12000 * 0.4);
               if(nTransValue == 1){
               $("#pN1fP").text(discValue);
+              $("#pN1fPV").val(discValue);
               $("#pN1eP").text(2000);
+              $("#pN1ePV").val(2000);
             }else{
               $("#pN2fP").text(discValue);
+              $("#pN2fPV").val(discValue);
               $("#pN2eP").text(1000);
+              $("#pN2ePV").val(1000);
             }
             }else{
               discValue = parseInt(60000) - parseInt(60000 * 0.25);
               $("#pIfP").text(discValue);
+              $("#pIfPV").val(discValue);
               $("#pIeP").text(5000);
+              $("#pIePV").val(5000);
             }
           }else if(packageValue == "south"){
             $("#pSfP").text(6000);
+            $("#pSfPV").val(6000);
             $("#pSeP").text(500);
+            $("#pSePV").val(500);
           }else if(packageValue == "north"){
             if(nTransValue == 1){
               $("#pN1fP").text(12000);
+              $("#pN1fPV").val(12000);
               $("#pN1eP").text(2000);
+              $("#pN1ePV").val(2000);
             }else{
               $("#pN2fP").text(12000);
+              $("#pN2fPV").val(12000);
               $("#pN2eP").text(1000);
+              $("#pN2ePV").val(1000);
             }
           }else{
             $("#pIfP").text(60000);
+            $("#pIfPV").val(60000);
             $("#pIeP").text(5000);
+            $("#pIePV").val(5000);
           }
         });
     });
 </script>
+        
     <script src ="jquery.js"></script>
 <script>
     function showSouth(checked){
@@ -640,134 +654,6 @@ if (isset($this->session->userdata['log_in']))
           }
         
     }
-</script>
-<script>
-    function showfullSouth(checked){
-        if(checked==true){
-            $("#amount1").show();
-            $("#amount2").hide();
-            $("#amount3").hide();
-            $("#amount4").hide();
-              $("#amount5").hide();
-            $("#amount6").hide();
-              $("#amount7").hide();
-            $("#amount8").hide();
-          }
-        
-    }
-</script>
-<script>
-    function showemiSouth(checked){
-        if(checked==true){
-            $("#amount1").hide();
-            $("#amount2").show();
-            $("#amount3").hide();
-            $("#amount4").hide();
-              $("#amount5").hide();
-            $("#amount6").hide();
-              $("#amount7").hide();
-            $("#amount8").hide();
-          }
-        
-    }
-</script>
-<script>
-    function showfullNorth1(checked){
-        if(checked==true){
-          $("#amount1").hide();
-            $("#amount2").hide();
-            $("#amount3").show();
-            $("#amount4").hide();
-              $("#amount5").hide();
-            $("#amount6").hide();
-              $("#amount7").hide();
-            $("#amount8").hide();
-          }
-        
-    }
-</script>
-<script>
-    function showemiNorth1(checked){
-        if(checked==true){
-          $("#amount1").hide();
-            $("#amount2").hide();
-            $("#amount3").hide();
-            $("#amount4").show();
-              $("#amount5").hide();
-            $("#amount6").hide();
-              $("#amount7").hide();
-            $("#amount8").hide();
-          }
-        
-    }
-</script>
-<script>
-    function showfullNorth2(checked){
-        if(checked==true){
-          $("#amount1").hide();
-            $("#amount2").hide();
-            $("#amount3").hide();
-            $("#amount4").hide();
-              $("#amount5").show();
-            $("#amount6").hide();
-              $("#amount7").hide();
-            $("#amount8").hide();
-          }
-        
-    }
-</script>
-
-</script>
-<script>
-    function showemiNorth2(checked){
-        if(checked==true){
-          $("#amount1").hide();
-            $("#amount2").hide();
-            $("#amount3").hide();
-            $("#amount4").hide();
-              $("#amount5").hide();
-            $("#amount6").show();
-              $("#amount7").hide();
-            $("#amount8").hide();
-          }
-        
-    }
-</script>
-<script>
-    function showfullInter(checked){
-        if(checked==true){
-          $("#amount1").hide();
-            $("#amount2").hide();
-            $("#amount3").hide();
-            $("#amount4").hide();
-              $("#amount5").hide();
-            $("#amount6").hide();
-              $("#amount7").show();
-            $("#amount8").hide();
-          }
-        
-    }
-</script>
-<script>
-    function showemiInter(checked){
-        if(checked==true){
-          $("#amount1").hide();
-            $("#amount2").hide();
-            $("#amount3").hide();
-            $("#amount4").hide();
-              $("#amount5").hide();
-            $("#amount6").hide();
-              $("#amount7").hide();
-            $("#amount8").show();
-          }
-        
-    }
-</script>
-
-<script>
-if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, window.location.href );
-}
 </script>
 
 
