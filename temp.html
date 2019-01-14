@@ -1,0 +1,109 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Saai Holidays Email-Template</title>
+
+<style type="text/css">
+	.ReadMsgBody {width: 100%; background-color: #ffffff;}
+	.ExternalClass {width: 100%; background-color: #ffffff;}
+	body	 {width: 100%; background-color: #ffffff; margin:0; padding:0; -webkit-font-smoothing: antialiased;font-family: Georgia, Times, serif}
+	table {border-collapse: collapse;}
+
+	@media only screen and (max-width: 640px)  {
+					body[yahoo] .deviceWidth {min-width:440px!important;max-width:440px!important; padding:0;}
+					body[yahoo] .center {text-align: center!important;}
+			}
+
+	@media only screen and (max-width: 479px) {
+					body[yahoo] .deviceWidth {min-width:280px!important;max-width:280px!important; padding:0;}
+					body[yahoo] .center {text-align: center!important;}
+			}
+
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" style="font-family: Georgia, Times, serif">
+
+<!-- Wrapper -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td width="100%" valign="top" bgcolor="#f0f0f0" style="padding-top:20px">
+
+			<!-- Start Header-->
+			<table width="580" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth" style="margin:0 auto;">
+				<tr>
+					<td width="100%" bgcolor="#4fbfa8">
+
+                            <!-- Logo -->
+                            <table border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth">
+                                <tr>
+                                    <td style="padding:0px 20px" class="center">
+                                    	<p style="font-family: Roboto; font-size:20px; color: #fff;">Saai Holidays</p>
+                                    </td>
+                                </tr>
+                            </table><!-- End Logo -->
+                    </td>
+				</tr>
+			</table><!-- End Header -->
+
+			<!-- One Column -->
+			<table width="580"  class="deviceWidth" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#ffffff" style="margin:0 auto;box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);">
+				   <tr>
+                    <td colspan="2" style="font-size: 20px; color: #000; font-weight: normal; text-align: center; font-family: Roboto, Times, serif; line-height: 24px; vertical-align: top; padding:10px 8px 10px 8px" bgcolor="#fff">
+                    <div>You Have Been Registered With Sai Holidays</div>
+						
+                    </td>
+                   </tr>
+                   <tr>
+                    <td colspan="2" style="font-size: 16px;min-width:564px;max-width:564px;min-height: 100px !important; color: #000; font-weight: normal; text-align: center; font-family: Roboto, Times, serif; line-height: 24px; vertical-align: top; padding:10px 8px 10px 8px" bgcolor="#fff">
+						Please use the below details for log in.
+                    </td>
+                   </tr>
+                   <tr>
+                    <td style="font-size: 14px; color: #000; font-weight: normal; text-align: right; font-family: Roboto, Times, serif; line-height: 24px; vertical-align: top; padding:10px 8px 10px 8px;width: 50%;" bgcolor="#fff">
+						Username
+                    </td>
+                    <td style="font-size: 14px; color: #000; font-weight: normal; text-align: left; font-family: Roboto, Times, serif; line-height: 24px; vertical-align: top; padding:10px 8px 10px 8px;width: 50%;" bgcolor="#fff">
+						: anand
+                    </td>                  
+                   </tr>
+                   <tr>
+						<td style="font-size: 14px; color: #000; font-weight: normal; text-align: right; font-family: Roboto, Times, serif; line-height: 24px; vertical-align: top; padding:10px 8px 10px 8px;width: 50%;" bgcolor="#fff">
+						password
+						</td>
+						<td style="font-size: 14px; color: #000; font-weight: normal; text-align: left; font-family: Roboto, Times, serif; line-height: 24px; vertical-align: top; padding:10px 8px 10px 8px;width: 50%;" bgcolor="#fff">
+						: anand
+						</td>
+                   </tr>
+           </table><!-- End One Column -->             
+<div style="height:15px;margin:0 auto;">&nbsp;</div><!-- spacer -->
+<div style="height:0px;margin:0 auto;">&nbsp;</div><!-- spacer -->
+			
+
+		</td>
+	</tr>
+</table> <!-- End Wrapper -->
+<div style="display:none; white-space:nowrap; font:15px courier; color:#ffffff;">
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</div>
+</body>
+</html>
+$smsurl = 'http://dnd.blackholesolution.com/api/sendmsg.php';
+$fields = array(
+    //'user'=> 'VALLIK',
+    //'pass'=> 'abcd1234',
+    //sender'=> 'VALLIK',
+    //'phone'=> $form_data['reg_Mobile'],
+    'text'=>"Dear Customer, Thanks for registering with us in vallikodivanniarmatrimonial.in. You have completed only quick registration. You account will be activated once you done the payment with full registration.",
+    'priority'=>'ndnd',
+    'stype'=>'normal'
+);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $smsurl);
+curl_setopt($ch, CURLOPT_POST, count($fields));
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($fields));
+curl_exec($ch);
+curl_close($ch);
