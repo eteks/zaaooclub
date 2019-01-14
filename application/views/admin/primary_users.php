@@ -55,7 +55,7 @@
     <th class="product_small">Count</th>
 	<th class="product_small">Status</th>
 	<th class="product_small">Created Date</th>
-	<th class="product_small">Actions</th>
+	<!-- <th class="product_small">Actions</th> -->
 </tr>
    </thead>
 <tbody>
@@ -65,11 +65,11 @@
             <td class="center"><?php echo $endusr["user_email"] ?></td>
             <td class="center"><?php echo date("d/m/Y", strtotime($endusr["user_dob"])); ?></td>
             <td class="center"><?php echo $endusr["user_mobile"] ?></td>
-            <td class="center"><?php echo $endusr["user_package"] ?></td>
+            <td class="center"><?php echo $endusr["package"] ?></td>
             <td class="center"><?php echo $endusr["users_count"] ?></td>
             <td class="center"><span class="<?php if($endusr["user_status"] ==1 ){ ?>label-success<?php } ?> label label-default"><?php if($endusr["user_status"] ==1 )echo "Active";else echo "InActive"; ?></span></td>
             <td class="center"><?php echo date("d/m/Y", strtotime($endusr["user_createddate"])); ?></td>
-            <td class="center">
+           <!--  <td class="center">
                 <a class="btn btn-info" href="<?php echo base_url(); ?>admin/users/edit_primary_users/<?php echo $endusr["user_id"] ?>">
                     <i class="glyphicon glyphicon-edit icon-white"></i>
                     Edit
@@ -78,7 +78,7 @@
                     <i class="glyphicon glyphicon-trash icon-white"></i>
                     Delete
                 </a>
-            </td>
+            </td> -->
         </tr>
     <?php endforeach ?>
     </tbody>

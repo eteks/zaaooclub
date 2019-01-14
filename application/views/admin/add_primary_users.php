@@ -50,7 +50,7 @@
   
 <form role="form" method="POST" action="<?php echo base_url(); ?>saai" class="" name="edit_enduser_form" id="edit_enduser_form" enctype="multipart/form-data">
 
-    <h4 class="heading3">Basic Details</h4>
+    <h4>Basic Details</h4>
       <div class="row">
     <div class="col-md-6">
       <div class="reg-group">
@@ -141,14 +141,13 @@
                         <input type="text" class="form-control" id="postal_code" placeholder="Enter Post Code" name="postal_code" value="<?php echo set_value('postal_code');?>"required>
                         </div>
     </div>
-    <div class="col">
+    <div class="col-md-6">
       <div class="reg-group">
                           <label>Country</label>
-                            <input list="countries" name="country" placeholder="country" class="form-control">
- 
+                           
+                          <input list="states" name="country" placeholder="country" class="form-control">
   
                         </div>
-
     </div>
   </div>
  
@@ -158,7 +157,7 @@
     <div class="col-md-6">
       <label class="gender">
 
-    <input class="option-input radio_button" type="radio" name="id_proof"  value="aadhar" checked required />
+    <input class="option-input radio_button package_label" type="radio" name="id_proof"  value="aadhar" checked required />
     Aadhar Card
   </label>
   <label class="gender">
@@ -189,7 +188,7 @@
     <div class="col-md-6">
       <div class="reg-group">
           <label>Upload ID Copy</label>
-            <input type="file" name="image"/>
+            <input type="file" name="image"/required>
           </div>
     </div>
    <div class="col"></div>
@@ -232,21 +231,21 @@
 
     <div class="row">
     <div class="col-md-6">
-      <div class="check"id="hiddenSouth" style="display: none;" >
+       <div class="check"id="hiddenSouth" style="display: none;" >
 <label class="label_fun">Mode of Transport</label>
- <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button" name="south_transport"  value="bus"> Bus</label>
-        
+ <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button mot" name="mode_of_transport"  value="bus"> Bus</label>
+ <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button" name="south_transport"  value="Train">Train</label>
 </div>
 <div class="check"id="hiddenNorth" style="display: none;" >
 <label class="label_fun">Mode of Transport</label>
- <label class="gender"><input type="radio" onchange="showNbus(this.checked)" class="option-input radio_button" name="south_transport"  value="bus"> Flight</label>
+ <label class="gender"><input type="radio" onchange="showNbus(this.checked)" class="option-input radio_button" name="mode_of_transport"  value="Flight"> Flight</label>
         
-  <label class="gender"><input type="radio" onchange="showTrain(this.checked)" class="option-input radio_button" name="south_transport"  value="train">Train</label>
+  <label class="gender"><input type="radio" onchange="showTrain(this.checked)" class="option-input radio_button" name="mode_of_transport"  value="Train">Train</label>
  </div>
 <div class="check"id="hiddenInter" style="display: none;" >
 <label class="label_fun">Mode of Transport</label>
 
-   <label class="gender"><input type="radio" onchange="showFlight(this.checked)" class="option-input radio_button" name="south_transport"  value="train"> Flight</label>
+   <label class="gender"><input type="radio" onchange="showFlight(this.checked)" class="option-input radio_button mot" name="mode_of_transport"  value="Flight"> Flight</label>
         
 </div>
 
@@ -254,94 +253,44 @@
     </div>
   </div>
  
-        <h3 class="heading3">Payment Details</h3>
-  <div class="row">
+        <h4>Payment Details</h4>
+ <div class="row">
     <div class="col-md-6">
       <div class="check"id="paymentSouth" style="display: none;" >
-<label class="label_fun">Payment Option</label>
- <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullSouth(this.checked)" name="payment"  value="val1"> Full</label>
-  <label class="gender"><input type="radio" class="option-input radio_button" onchange="showemiSouth(this.checked)" name="payment"  value="val2"> EMI</label>
+<label class="label_fun">Payment Option</label>  
+
+------------------------------------
+ <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullSouth(this.checked)" name="payment"  value="val1" checked> Full Rs.<span id="pSfP"></span></label>
+  <label class="gender"><input type="radio" class="option-input radio_button" onchange="showemiSouth(this.checked)" name="payment"  value="val2" checked> EMI Rs.<span id="pSeP"></span></label>
 </div>
 <div class="check"id="paymentNorth1" style="display: none;" >
 <label class="label_fun">Payment Option</label>
- <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullNorth1(this.checked)" name="payment"  value="option1"> Full</label>
-  <label class="gender"><input type="radio" onchange="showemiNorth1(this.checked)" class="option-input radio_button" name="payment"  value="option2"> EMI</label>
+ <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullNorth1(this.checked)" name="payment"  value="option1"> Full Rs.<span id="pN1fP"></span></label>
+  <label class="gender"><input type="radio" onchange="showemiNorth1(this.checked)" class="option-input radio_button" name="payment"  value="option2"> EMI Rs.<span id="pN1eP"></span></label>
         
    </div>
 <div class="check"id="paymentNorth2" style="display: none;" >
 <label class="label_fun">Payment Option</label>
 
-   <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullNorth2(this.checked)" name="payment"  value="value1"> Full</label>
-    <label class="gender"><input type="radio" onchange="showemiNorth2(this.checked)" class="option-input radio_button" name="payment"  value="value2"> EMI</label>
+   <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullNorth2(this.checked)" name="payment"  value="value1" checked> Full Rs.<span id="pN2fP"></span></label>
+    <label class="gender"><input type="radio" onchange="showemiNorth2(this.checked)" class="option-input radio_button" name="payment"  value="value2" checked> EMI Rs.<span id="pN2eP"></span></label>
   </div>
   <div class="check"id="paymentInter" style="display: none;" >
 <label class="label_fun">Payment Option</label>
 
-   <label class="gender"><input type="radio" onchange="showfullInter(this.checked)" class="option-input radio_button" name="payment"  value="valu1"> Full</label>
-    <label class="gender"><input type="radio" onchange="showemiInter(this.checked)" class="option-input radio_button" name="payment"  value="valu2"> EMI</label>
+   <label class="gender"><input type="radio" onchange="showfullInter(this.checked)" class="option-input radio_button" name="payment"  value="valu1" checked> Full Rs.<span id="pIfP"></span></label>
+    <label class="gender"><input type="radio" onchange="showemiInter(this.checked)" class="option-input radio_button" name="payment"  value="valu2" checked> EMI Rs.<span id="pIeP"></span></label>
   </div>
     </div>
-    <div class="col-md-6">
+    <div class="col">
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-6">
-       <div class="check" id="amount1" style="display: none;" >
-<label class="label_fun">Amount</label>
- <label class="gender" ><input type="radio" class="option-input radio_button"  name="amount"  value="val1" checked> 6000/-</label></div>
-  <div class="check"  id="amount2"style="display: none;" >
-<label class="label_fun">Amount</label>
-  <label class="gender"><input type="radio" class="option-input radio_button"  name="amount"  value="val1" checked> 500/-</label>
-</div>
-
-<div class="check"id="amount3" style="display: none;" >
-<label class="label_fun">Amount</label>
- <label class="gender"><input type="radio" class="option-input radio_button"  name="amount"  value="option1"> 12000/-</label></div>
-  <div class="check"id="amount4" style="display: none;" >
-<label class="label_fun">Amount</label>
- <label class="gender"><input type="radio" class="option-input radio_button"  name="amount"  value="val1" checked> 1000/-</label>
-          
-   </div>
-<div class="check"id="amount5" style="display: none;" >
-<label class="label_fun">Amount</label>
-   <label class="gender"><input type="radio" class="option-input radio_button"  name="amount"  value="value1" checked> 12000/-</label></div>
-    <div class="check" id="amount6"style="display: none;" >
-<label class="label_fun">Amount</label>
-   <label class="gender"><input type="radio" class="option-input radio_button"  name="amount"  value="value1" checked> 2000/-</label>
-    
-  </div>
-  <div class="check"id="amount7" style="display: none;" >
-<label class="label_fun">Amount</label>
-
-   <label class="gender"><input type="radio"  class="option-input radio_button" name="amount"  value="valu1" checked> 60000/-</label></div>
-    <div class="check" id="amount8" style="display: none;" >
-<label class="label_fun">Amount</label>
-     <label class="gender"><input type="radio" class="option-input radio_button"  name="amount"  value="value1" checked>  5000/-</label>
-    
-  </div>
-
-    </div></div>
     <div class="group">    
                     <button type="submit" value="Upload Image" class="btn submit-btn btn-default">Submit</button>
                     </div>
 </div>
 
-        <div class="table-responsive">          
-          <table class="table">
-          <thead></thead>
-          <tbody>
-              <tr><td>&#x25C8; Number of Login under My Account</td><td>100</td></tr>
-              <tr><td>&#x25C8; Total Amount </td><td>50,00,000</td></tr>
-              <tr><td>&#x25C8; Actual Amount</td><td>10,00,000</td></tr>
-              <tr><td>&#x25C8; Balance Amount</td><td>40,00,000</td></tr>
-              <tr><td>&#x25C8; Total South Indian Packages</td><td>600000</td></tr>
-              <tr><td>&#x25C8; Total North Indian Packages</td><td>1200000</td></tr>
-              <tr><td>&#x25C8; Total International Packages</td><td>3200000</td></tr>
-   
-            </tbody>
-            </table>
-            </div>
-    </div>
+        </div>
 </div>
 </form>
 </div>
@@ -353,6 +302,64 @@
 <script>
     $(document).ready(function(){
         $('#user_dob').datepicker({format: 'yyyy-mm-dd'})
+         $('input[type=radio][name=package]').change(function() {
+          $('.mot').prop('checked', false);
+        });
+
+        $("#pay-tab").click(function (e) {
+          var dob = $('#user_dob').val();
+          var today = new Date();
+          var birthDate = new Date(dob);
+          var age = today.getFullYear() - birthDate.getFullYear();
+          var m = today.getMonth() - birthDate.getMonth();
+          if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+              age--;
+          }
+          var packageValue = $("input[name='package']:checked").val();
+          var packageNTransValue = $("input[name='north_transport']:checked").val();
+          var nTransValue;
+          if(packageNTransValue == "flight"){
+            nTransValue = 1;
+          }
+          else{
+            nTransValue = 2;
+          }
+          if(age >=3 && age <=10){
+            var discValue;
+            if(packageValue == "south"){
+              discValue = parseInt(6000) - parseInt(6000 * 0.4);
+              $("#pSfP").text(discValue);
+              $("#pSeP").text(500);
+            }else if(packageValue == "north"){
+              discValue = parseInt(12000) - parseInt(12000 * 0.4);
+              if(nTransValue == 1){
+              $("#pN1fP").text(discValue);
+              $("#pN1eP").text(2000);
+            }else{
+              $("#pN2fP").text(discValue);
+              $("#pN2eP").text(1000);
+            }
+            }else{
+              discValue = parseInt(60000) - parseInt(60000 * 0.25);
+              $("#pIfP").text(discValue);
+              $("#pIeP").text(5000);
+            }
+          }else if(packageValue == "south"){
+            $("#pSfP").text(6000);
+            $("#pSeP").text(500);
+          }else if(packageValue == "north"){
+            if(nTransValue == 1){
+              $("#pN1fP").text(12000);
+              $("#pN1eP").text(2000);
+            }else{
+              $("#pN2fP").text(12000);
+              $("#pN2eP").text(1000);
+            }
+          }else{
+            $("#pIfP").text(60000);
+            $("#pIeP").text(5000);
+          }
+        });
     });
 </script>
     <script src ="jquery.js"></script>

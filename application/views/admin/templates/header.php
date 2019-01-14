@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Saai Holidays</title>
+    <title>Oozaaoo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
     <meta name="author" content="Muhammad Usman">
@@ -37,7 +37,8 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="<?php echo base_url()."/admin" ?>"> <!-- <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs"/> -->
-            <span>Saai Holidays</span></a>
+            <span>Oozaaoo</span></a>
+             
             <?php 
             $user_session = $this->session->userdata("logged_in");
             if (!empty($user_session)){?>

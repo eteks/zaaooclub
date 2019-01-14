@@ -75,7 +75,7 @@
   <div class=" navbar-collapse justify-content-end nav-color">
 
     <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="http://www.oozaaoo.com./index.php"><i class="fa fa-home  fa-fw" style="font-size:18px;" aria-hidden="true"></i> HOME</a></li> 
+                    <li class="nav-item"<a class="nav-link" href="http://www.oozaaoo.com./index.php"><i class="fa fa-home  fa-fw" style="font-size:18px;" aria-hidden="true"></i> HOME</a></li> 
                         <?php
                         if (isset($this->session->userdata['log_in'])) 
                         {

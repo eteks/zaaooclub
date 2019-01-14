@@ -151,33 +151,7 @@ class Users extends CI_Controller
 			
 			$validation_rules = array(
 
-		      array(
-		             'field'   => 'first_name',
-		             'label'   => 'First Name',
-		             'rules'   => 'trim|required|min_length[3]|max_length[25]'
-		          ),
-		      array(
-		             'field'   => 'user_mobile',
-		             'label'   => 'Mobile',
-		             'rules'   => 'trim|required|min_length[10]|max_length[10]'
-		          ), 
-				array(
-				     'field'   => 'user_email',
-				     'label'   => 'Email',
-				     'rules'   => 'trim|required|valid_email'
-				  ), 
-		       
-	          array(
-		             'field'   => 'user_dob',
-		             'label'   => 'Date Of Birth',
-		             'rules'   => 'trim|required'
-		          ),
-	   
-	          array(
-		             'field'   => 'user_package',
-		             'label'   => 'Package',
-		             'rules'   => 'trim|required'
-		          ),
+		     
 		       
 		     
 		    );
@@ -262,33 +236,89 @@ class Users extends CI_Controller
 			$validation_rules = array(
 
 		      array(
-		             'field'   => 'first_name',
-		             'label'   => 'First Name',
-		             'rules'   => 'trim|required|min_length[5]|max_length[10]'
-		          ),
-		      array(
-		             'field'   => 'user_mobile',
-		             'label'   => 'Mobile',
-		             'rules'   => 'trim|required|min_length[10]|max_length[10]'
-		          ), 
-				array(
-				     'field'   => 'user_email',
-				     'label'   => 'Email',
-				     'rules'   => 'trim|required|valid_email'
-				  ), 
-		       
-	          array(
-		             'field'   => 'user_dob',
-		             'label'   => 'Date Of Birth',
-		             'rules'   => 'trim|required'
-		          ),
-	   
-	          array(
-		             'field'   => 'user_package',
-		             'label'   => 'Package',
-		             'rules'   => 'trim|required'
-		          ),
-		       
+                     'field'   => 'first_name',
+                     'label'   => 'First Name',
+                     'rules'   => 'trim|required|min_length[3]|max_length[25]'
+                  ),
+              array(
+                     'field'   => 'last_name',
+                     'label'   => 'Last Name',
+                     'rules'   => 'trim|required|min_length[3]|max_length[25]'
+                  ),
+                array(
+                     'field'   => 'user_dob',
+                     'label'   => 'Date Of Birth',
+                     'rules'   => 'trim|required'
+                  ),
+
+              array(
+                     'field'   => 'gender',
+                     'label'   => 'Gender',
+                     'rules'   => 'trim|required'
+                  ),
+             array(
+                     'field'   => 'user_mobile',
+                     'label'   => 'Mobile',
+                     'rules'   => 'trim|required|min_length[10]|max_length[10]|is_unique[saai_users.user_mobile]'
+                  ), 
+                array(
+                     'field'   => 'user_email',
+                     'label'   => 'Email',
+                     'rules'   => 'trim|required|valid_email|is_unique[saai_users.user_email]'
+                  ), 
+                           
+          array(
+                     'field'   => 'address_line1',
+                     'label'   => 'Address Line 1',
+                     'rules'   => 'trim|required'
+                  ),
+          array(
+                     'field'   => 'address_line2',
+                     'label'   => 'Address Line 2',
+                     'rules'   => 'trim|required'
+                  ),
+          array(
+                     'field'   => 'city',
+                     'label'   => 'City',
+                     'rules'   => 'trim|required'
+                  ),
+          array(
+                     'field'   => 'state',
+                     'label'   => 'State',
+                     'rules'   => 'trim|required'
+                  ),
+          array(
+                     'field'   => 'id_proof',
+                     'label'   => 'ID Proof',
+                     'rules'   => 'trim|required'
+                  ),
+          array(
+                     'field'   => 'aadhar_number',
+                     'label'   => 'Aadhar Card Number',
+                     'rules'   => 'trim|required|min_length[12]|max_length[12]|is_unique[saai_users.aadhar_number]'
+                  ),
+              array(
+                     'field'   => 'package',
+                     'label'   => 'Package',
+                     'rules'   => 'trim|required'
+                  ),
+               array(
+                     'field'   => 'mode_of_transport',
+                     'label'   => 'Mode of Transport',
+                     'rules'   => 'trim|required'
+                  ),
+                    array(
+                     'field'   => 'image',
+                     'label'   => 'Upload ID Copy',
+                     'rules'   => 'trim1|required'
+                     //image
+                  ),
+                          array(
+                     'field'   => 'payment',
+                     'label'   => 'Payment',
+                     'rules'   => 'trim1|required'
+                     //image
+                  ),
 		     
 		    );
 		    $this->form_validation->set_rules($validation_rules);
