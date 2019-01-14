@@ -131,7 +131,7 @@ class Usersmodel extends CI_Model
 		{	
 			$this->db->insert('saai_users', $data);		
 			$insert_id = $this->db->insert_id();
-			$unique="Saai_".$insert_id;
+			$unique="oozaaoo_".$insert_id;
 			$data=array('unique_id'=>$unique);
 			$this->db->where('user_id', $insert_id);
 			$this->db->update('saai_users', $data);

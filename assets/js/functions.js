@@ -13,7 +13,7 @@ $(document).ready(function() {
 		image: {
 			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
 			titleSrc: function(item) {
-				return item.el.attr('title') + '<small>by Saai Holidays</small>';
+				return item.el.attr('title') + '<small>by Oozaaoo Club</small>';
 			}
 		}
 	});

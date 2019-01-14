@@ -4,7 +4,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<title>Saai Holidays Email-Template</title>
+<title>Oozaaoo Club Email-Template</title>
 
 <style type="text/css">
 	.ReadMsgBody {width: 100%; background-color: #ffffff;}
@@ -41,7 +41,7 @@
                             <table border="0" cellpadding="0" cellspacing="0" align="left" class="deviceWidth">
                                 <tr>
                                     <td style="padding:0px 20px" class="center">
-                                    	<p style="font-family: Roboto; font-size:20px; color: #fff;">Saai Holidays</p>
+                                    	<p style="font-family: Roboto; font-size:20px; color: #fff;">Oozaaoo Club</p>
                                     </td>
                                 </tr>
                             </table><!-- End Logo -->
