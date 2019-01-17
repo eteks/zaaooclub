@@ -41,9 +41,7 @@
             </div>
             <div class="box-content">
 <?php } ?>
-                <?php if (isset($error_message)){ 
-                    echo "<p class='error_msg_reg alert alert-info'>".$error_message."</p>";
-                }?>
+                
                 <?php ?>
                 <div class="container-size">
  
@@ -293,6 +291,9 @@
         </div>
 </div>
 </form>
+<?php if (isset($error_message)){ 
+                    echo "<p class='error_msg_reg alert alert-info'>".$error_message."</p>";
+                }?>
 </div>
 
 

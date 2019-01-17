@@ -148,13 +148,12 @@ class Pages extends CI_Controller
                     array(
                      'field'   => 'image',
                      'label'   => 'Upload ID Copy',
-                     'rules'   => 'trim1|required'
                      //image
                   ),
                           array(
                      'field'   => 'payment',
                      'label'   => 'Payment',
-                     'rules'   => 'trim1|required'
+                     'rules'   => 'trim|required'
                      //image
                   ),
            
@@ -218,7 +217,7 @@ class Pages extends CI_Controller
                 'user_email' => $this->input->post('user_email'),
                  'id_proof' => $this->input->post('id_proof'),
                  'package' => $this->input->post('package'),
-                 'south_transport' => $this->input->post('south_transport'),
+                 'mode_of_transport' => $this->input->post('mode_of_transport'),
                  
                  'payment' => $this->input->post('payment'),
                 'user_password' => random_password(), 

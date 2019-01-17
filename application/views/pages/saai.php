@@ -53,10 +53,7 @@ if (isset($this->session->userdata['log_in']))
 
 
                     </div>
-                <?php if (isset($error_message)){ 
-                    echo "<p class='error_msg_reg alert alert-danger text-center'>".$error_message."</p>";
-                }?>
-                <?php ?></div>
+                </div>
 
 
 <!------Package details----->
@@ -656,7 +653,10 @@ if (isset($this->session->userdata['log_in']))
     }
 </script>
 
-
+<?php if (isset($error_message)){ 
+                    echo "<p class='error_msg_reg alert alert-danger text-center'>".$error_message."</p>";
+                }?>
+                <?php ?>
 <?php
 }
 ?>
