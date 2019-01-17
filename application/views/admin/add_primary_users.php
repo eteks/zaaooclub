@@ -232,7 +232,7 @@
        <div class="check"id="hiddenSouth" style="display: none;" >
 <label class="label_fun">Mode of Transport</label>
  <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button mot" name="mode_of_transport"  value="bus"> Bus</label>
- <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button" name="south_transport"  value="Train">Train</label>
+ <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button" name="mode_of_transport"  value="Train">Train</label>
 </div>
 <div class="check"id="hiddenNorth" style="display: none;" >
 <label class="label_fun">Mode of Transport</label>
@@ -302,13 +302,18 @@
    
 <script>
     $(document).ready(function(){
-        $('#user_dob').datepicker({format: 'yyyy-mm-dd'})
-         $('input[type=radio][name=package]').change(function() {
+        $('#user_dob').datepicker({format: 'yyyy-mm-dd'});
+
+        $('input[type=radio][name=package]').click(function() {
           $('.mot').prop('checked', false);
         });
 
-        $("#pay-tab").click(function (e) {
+        $('input[type=radio][name=mode_of_transport]').click(function() {
           var dob = $('#user_dob').val();
+          if(dob == ""){
+            alert("Please enter Date of Birth");
+            return;
+          }
           var today = new Date();
           var birthDate = new Date(dob);
           var age = today.getFullYear() - birthDate.getFullYear();
@@ -316,49 +321,48 @@
           if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
               age--;
           }
-          var packageValue = $("input[name='package']:checked").val();
-          var packageNTransValue = $("input[name='north_transport']:checked").val();
-          var nTransValue;
-          if(packageNTransValue == "flight"){
-            nTransValue = 1;
-          }
-          else{
-            nTransValue = 2;
-          }
-          if(age >=3 && age <=10){
-            var discValue;
-            if(packageValue == "south"){
+
+          var selectedPack = $("input[name='package']:checked").val();
+          if(selectedPack == "south"){
+            if(age >=3 && age <=10){
+              var discValue;
               discValue = parseInt(6000) - parseInt(6000 * 0.4);
               $("#pSfP").text(discValue);
               $("#pSeP").text(500);
-            }else if(packageValue == "north"){
+            }else {
+              $("#pSfP").text(6000);
+              $("#pSeP").text(500);
+            }
+          }else if(selectedPack == "north"){
+            if(age >=3 && age <=10){
+              var discValue;
               discValue = parseInt(12000) - parseInt(12000 * 0.4);
-              if(nTransValue == 1){
-              $("#pN1fP").text(discValue);
-              $("#pN1eP").text(2000);
-            }else{
-              $("#pN2fP").text(discValue);
-              $("#pN2eP").text(1000);
+              if(this.value == "Flight"){
+                $("#pN1fP").text(discValue);
+                $("#pN1eP").text(2000);
+              }else{
+                $("#pN2fP").text(discValue);
+                $("#pN2eP").text(1000);
+              }
+            }else {
+              if(this.value == "Flight"){
+                $("#pN1fP").text(12000);
+                $("#pN1eP").text(2000);
+              }else{
+                $("#pN2fP").text(12000);
+                $("#pN2eP").text(1000);
+              }
             }
-            }else{
-              discValue = parseInt(60000) - parseInt(60000 * 0.25);
-              $("#pIfP").text(discValue);
-              $("#pIeP").text(5000);
-            }
-          }else if(packageValue == "south"){
-            $("#pSfP").text(6000);
-            $("#pSeP").text(500);
-          }else if(packageValue == "north"){
-            if(nTransValue == 1){
-              $("#pN1fP").text(12000);
-              $("#pN1eP").text(2000);
-            }else{
-              $("#pN2fP").text(12000);
-              $("#pN2eP").text(1000);
-            }
-          }else{
-            $("#pIfP").text(60000);
+          }else if(selectedPack == "inter"){
+            if(age >=3 && age <=10){
+            var discValue;
+            discValue = parseInt(60000) - parseInt(60000 * 0.25);
+            $("#pIfP").text(discValue);
             $("#pIeP").text(5000);
+            }else{
+              $("#pIfP").text(60000);
+	            $("#pIeP").text(5000);
+            }
           }
         });
     });
@@ -512,8 +516,6 @@
         
     }
 </script>
-
-</script>
 <script>
     function showemiNorth2(checked){
         if(checked==true){
@@ -567,11 +569,11 @@ if ( window.history.replaceState ) {
 </script>
 
 
-<script>
+<!-- <script>
     $(document).ready(function(){
         $('#user_dob').datepicker({format: 'yyyy-mm-dd'})
     });
-</script>
+</script> -->
 <?php if(!$this->input->is_ajax_request()){ ?>
             </div>
         </div>
