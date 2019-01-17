@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = APP_URL;
 
-$config['admin_base_url'] = 'http://localhost/ssaai/';
+$config['admin_base_url'] = 'http://localhost/zaaooclub/admin';
 
 
 /*

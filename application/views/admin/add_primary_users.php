@@ -188,7 +188,7 @@
     <div class="col-md-6">
       <div class="reg-group">
           <label>Upload ID Copy</label>
-            <input type="file" name="image"/required>
+            <input type="file" name="image" required/>
           </div>
     </div>
    <div class="col"></div>
