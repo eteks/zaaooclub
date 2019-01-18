@@ -52,13 +52,13 @@
     <div class="row">
     <div class="col-md-6">
       <div class="reg-group">
-                  <label for="first_name">First Name</label>
+                  <label for="first_name">First Name*</label>
                   <input type="text" class="form-control" placeholder="First name" id="first_name" name="first_name" value="<?php echo set_value('first_name');?>" /required>
                 </div>
     </div>
     <div class="col-md-6">
       <div class="reg-group">
-                  <label for="last_name">Last Name</label>
+                  <label for="last_name">Last Name*</label>
                   <input type="text" class="form-control" id="last_name" placeholder="Enter last Name" name="last_name" value="<?php echo set_value('last_name');?>">
                 </div>
     </div>
@@ -68,12 +68,12 @@
     <div class="col-md-6">
       
                 <div class="reg-group">
-                  <label for="exampleInputEmail1">Date Of Birth</label>
+                  <label for="exampleInputEmail1">Date Of Birth*</label>
                   <input type="text" class="form-control" id="user_dob" placeholder="Date of Birth" name="user_dob" value="<?php echo set_value('user_dob');?>">
                 </div required>
     </div>
     <div class="col-md-6">
-      <div class="radio_option"><label>Gender</label><br>
+      <div class="radio_option"><label>Gender*</label><br>
                   <label class="gender" >
                   <input type="radio" class="option-input radio_button" name="gender"  value="male" checked /><span> Male</span>
                   </label>
@@ -89,13 +89,13 @@
   <div class="row">
     <div class="col-md-6">
        <div class="reg-group">
-                          <label for="exampleInputEmail1">Phone Number</label>
+                          <label for="exampleInputEmail1">Phone Number*</label>
                         <input type="text" class="form-control" id="mobile" placeholder="Enter mobile number" name="user_mobile" value="<?php echo set_value('user_mobile');?>" required>
                         </div>
     </div>
     <div class="col-md-6">
       <div class="reg-group">
-                          <label for="exampleInputEmail1">Email ID</label>
+                          <label for="exampleInputEmail1">Email ID*</label>
                         <input type="text" class="form-control" id="enduser_email" placeholder="Enter email id" name="user_email" value="<?php echo set_value('user_email');?>" required>
                         </div>
     </div>
@@ -104,7 +104,7 @@
     <div class="row">
     <div class="col-md-6">
       <div class="reg-group">
-                          <label for="last_name">Address Line 1</label>
+                          <label for="last_name">Address Line 1*</label>
                         <input type="text" class="form-control" id="address_line1" placeholder="Enter Address Line 1" name="address_line1" value="<?php echo set_value('address_line1');?>" required>
                           </div>
     </div>
@@ -118,13 +118,13 @@
   <div class="row">
     <div class="col-md-6">
       <div class="reg-group">
-                          <label for="last_name">City</label>
+                          <label for="last_name">City*</label>
                         <input type="text" class="form-control" id="city" placeholder="Enter city" name="city" value="<?php echo set_value('city');?>" required>
                         </div>
     </div>
     <div class="col-md-6">
       <div class="reg-group">
-                          <label>State</label>
+                          <label>State*</label>
                            
                           <input list="states" id="state" name="state" placeholder="State" class="form-control">
   
@@ -221,13 +221,13 @@
   <div class="row">
     <div class="col-md-6">
         <div class="reg-group">
-                          <label for="postal_code">Postal Code</label>
-                        <input type="text" class="form-control" id="nominee_postal_code" placeholder="Enter Post Code" name="postal_code" value="<?php echo set_value('postal_code');?>"required>
+                          <label for="postal_code">Postal Code*</label>
+                        <input type="text" class="form-control" id="nominee_postal_code" placeholder="Enter Post Code" name="nominee_postal_code" value="<?php echo set_value('postal_code');?>"required>
                         </div>
     </div>
     <div class="col-md-6">
       <div class="reg-group">
-                          <label>Country</label>
+                          <label>Country*</label>
                            
                           <input list="states" id="nominee_country" name="nominee_country" placeholder="country" class="form-control">
   
@@ -271,7 +271,7 @@
               <div class="row">
     <div class="col-md-6">
       <div class="reg-group">
-          <label>Upload ID Copy</label>
+          <label>Upload ID Copy*</label>
             <input type="file" name="image" required/>
           </div>
     </div>
@@ -280,7 +280,7 @@
     <div class="row">
     <div class="col-md-6">
       <div class="reg-group">
-          <label for="aadhar_number">Aadhar Card Number</label>
+          <label for="aadhar_number">Aadhar Card Number*</label>
         <input type="text" class="form-control" id="aadhar_number" placeholder="xxxx-xxxx-xxxx" name="aadhar_number" value="<?php echo set_value('aadhar_number');?>">
 </div>
     </div> <div class="col-md-6"></div>
@@ -292,7 +292,7 @@
         <div class="check">
   <div class="row">
     <div class="col-md-6">
-      <label class="label_fun">Type Of Package</label>
+      <label class="label_fun">Type Of Package*</label>
       <label class="gender">
 
     <input type="radio" name="package" onchange="showSouth(this.checked)" class="option-input radio_button" value="south"/>
@@ -316,18 +316,18 @@
     <div class="row">
     <div class="col-md-6">
        <div class="check"id="hiddenSouth" style="display: none;" >
-<label class="label_fun">Mode of Transport</label>
+<label class="label_fun">Mode of Transport*</label>
  <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button mot" name="mode_of_transport"  value="bus"> Bus</label>
  <label class="gender"><input type="radio" onchange="showSbus(this.checked)" class="option-input radio_button" name="mode_of_transport"  value="Train">Train</label>
 </div>
 <div class="check"id="hiddenNorth" style="display: none;" >
-<label class="label_fun">Mode of Transport</label>
+<label class="label_fun">Mode of Transport*</label>
  <label class="gender"><input type="radio" onchange="showNbus(this.checked)" class="option-input radio_button" name="mode_of_transport"  value="Flight"> Flight</label>
         
   <label class="gender"><input type="radio" onchange="showTrain(this.checked)" class="option-input radio_button" name="mode_of_transport"  value="Train">Train</label>
  </div>
 <div class="check"id="hiddenInter" style="display: none;" >
-<label class="label_fun">Mode of Transport</label>
+<label class="label_fun">Mode of Transport*</label>
 
    <label class="gender"><input type="radio" onchange="showFlight(this.checked)" class="option-input radio_button mot" name="mode_of_transport"  value="Flight"> Flight</label>
         
@@ -341,26 +341,26 @@
  <div class="row">
     <div class="col-md-6">
       <div class="check"id="paymentSouth" style="display: none;" >
-<label class="label_fun">Payment Option</label>  
+<label class="label_fun">Payment Option*</label>  
 
 ------------------------------------
  <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullSouth(this.checked)" name="payment"  value="val1" checked> Full Rs.<span id="pSfP"></span></label>
   <label class="gender"><input type="radio" class="option-input radio_button" onchange="showemiSouth(this.checked)" name="payment"  value="val2" checked> EMI Rs.<span id="pSeP"></span></label>
 </div>
 <div class="check"id="paymentNorth1" style="display: none;" >
-<label class="label_fun">Payment Option</label>
+<label class="label_fun">Payment Option*</label>
  <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullNorth1(this.checked)" name="payment"  value="option1"> Full Rs.<span id="pN1fP"></span></label>
   <label class="gender"><input type="radio" onchange="showemiNorth1(this.checked)" class="option-input radio_button" name="payment"  value="option2"> EMI Rs.<span id="pN1eP"></span></label>
         
    </div>
 <div class="check"id="paymentNorth2" style="display: none;" >
-<label class="label_fun">Payment Option</label>
+<label class="label_fun">Payment Option*</label>
 
    <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullNorth2(this.checked)" name="payment"  value="value1" checked> Full Rs.<span id="pN2fP"></span></label>
     <label class="gender"><input type="radio" onchange="showemiNorth2(this.checked)" class="option-input radio_button" name="payment"  value="value2" checked> EMI Rs.<span id="pN2eP"></span></label>
   </div>
   <div class="check"id="paymentInter" style="display: none;" >
-<label class="label_fun">Payment Option</label>
+<label class="label_fun">Payment Option*</label>
 
    <label class="gender"><input type="radio" onchange="showfullInter(this.checked)" class="option-input radio_button" name="payment"  value="valu1" checked> Full Rs.<span id="pIfP"></span></label>
     <label class="gender"><input type="radio" onchange="showemiInter(this.checked)" class="option-input radio_button" name="payment"  value="valu2" checked> EMI Rs.<span id="pIeP"></span></label>
@@ -422,17 +422,18 @@
           }else if(selectedPack == "north"){
             if(age >=3 && age <=10){
               var discValue;
-              discValue = parseInt(12000) - parseInt(12000 * 0.4);
               if(this.value == "Flight"){
+                discValue = parseInt(24000) - parseInt(24000 * 0.4);
                 $("#pN1fP").text(discValue);
                 $("#pN1eP").text(2000);
               }else{
+                discValue = parseInt(12000) - parseInt(12000 * 0.4);
                 $("#pN2fP").text(discValue);
                 $("#pN2eP").text(1000);
               }
             }else {
               if(this.value == "Flight"){
-                $("#pN1fP").text(12000);
+                $("#pN1fP").text(24000);
                 $("#pN1eP").text(2000);
               }else{
                 $("#pN2fP").text(12000);
