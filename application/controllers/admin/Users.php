@@ -454,7 +454,13 @@ class Users extends CI_Controller
                 'user_status' => 0,
                  'level' => 0,
                 'user_createddate' => date('Y-m-d'),
-                'image' => isset($targetfile_details) ? $targetfile_details : ""
+                'image' => isset($targetfile_details) ? $targetfile_details : "",
+                'nominee_addr_line1' => $this->input->post('nominee_address_line1'),
+                'nominee_addr_line2 ' => $this->input->post('nominee_address_line2'),
+                'nominee_city' => $this->input->post('nominee_city'),
+                'nominee_state' => $this->input->post('nominee_state'),
+                'nominee_postalcode' => $this->input->post('nominee_postal_code'),
+                'nominee_country' => $this->input->post('nominee_country'),
                 );
 
 

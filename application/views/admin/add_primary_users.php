@@ -126,7 +126,7 @@
       <div class="reg-group">
                           <label>State</label>
                            
-                          <input list="states" name="state" placeholder="State" class="form-control">
+                          <input list="states" id="state" name="state" placeholder="State" class="form-control">
   
                         </div>
     </div>
@@ -143,7 +143,7 @@
       <div class="reg-group">
                           <label>Country</label>
                            
-                          <input list="states" name="country" placeholder="country" class="form-control">
+                          <input list="states" id="country" name="country" placeholder="country" class="form-control">
   
                         </div>
     </div>
@@ -153,13 +153,13 @@
     <div class="col-md-6">
       <div class="reg-group">
                   <label for="first_name">First Name</label>
-                  <input type="text" class="form-control" placeholder="First name" id="first_name" name="first_name" value="<?php echo set_value('first_name');?>" /required>
+                  <input type="text" class="form-control" id="first_name" placeholder="First name" name="nominee_firstname">
                 </div>
     </div>
     <div class="col-md-6">
       <div class="reg-group">
                   <label for="last_name">Last Name</label>
-                  <input type="text" class="form-control" id="last_name" placeholder="Enter last Name" name="last_name" value="<?php echo set_value('last_name');?>">
+                  <input type="text" class="form-control" id="last_name" placeholder="Enter last Name" name="nominee_lastname">
                 </div>
     </div>
   </div>
@@ -167,13 +167,13 @@
     <div class="col-md-6">
        <div class="reg-group">
                           <label for="exampleInputEmail1">Phone Number</label>
-                        <input type="text" class="form-control" id="mobile" placeholder="Enter mobile number" name="user_mobile" value="<?php echo set_value('user_mobile');?>" required>
+                        <input type="text" class="form-control" id="mobile" placeholder="Enter mobile number" name="nominee_mobilenumber">
                         </div>
     </div>
     <div class="col-md-6">
       <div class="reg-group">
                           <label for="exampleInputEmail1">Email ID</label>
-                        <input type="text" class="form-control" id="enduser_email" placeholder="Enter email id" name="user_email" value="<?php echo set_value('user_email');?>" required>
+                        <input type="text" class="form-control" id="enduser_email" placeholder="Enter email id" name="nominee_email">
                         </div>
     </div>
   </div>
@@ -181,7 +181,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="reg-group">
-        <input type="checkbox" class="form-control" id="address_line1" placeholder="" name="address_line1" value="" style="width:100px;vertical-align: middle;display: inline-block;">
+        <input type="checkbox" class="form-control" id="sameaddress_status" placeholder="" name="sameaddress_status" value="" style="width:100px;vertical-align: middle;display: inline-block;">
                           <label for="last_name" style="vertical-align: middle;"">Same address</label>
                         
         </div>
@@ -191,13 +191,13 @@
     <div class="col-md-6">
       <div class="reg-group">
                           <label for="last_name">Address Line 1</label>
-                        <input type="text" class="form-control" id="address_line1" placeholder="Enter Address Line 1" name="address_line1" value="<?php echo set_value('address_line1');?>" required>
+                        <input type="text" class="form-control" id="nominee_address_line1" placeholder="Enter Address Line 1" name="nominee_address_line1" value="<?php echo set_value('address_line1');?>" required>
                           </div>
     </div>
     <div class="col-md-6">
      <div class="reg-group">
                           <label for="last_name">Address Line 2</label>
-                        <input type="text" class="form-control" id="address_line2" placeholder="Enter Address Line 2" name="address_line2" value="<?php echo set_value('address_line2');?>" required>
+                        <input type="text" class="form-control" id="nominee_address_line2" placeholder="Enter Address Line 2" name="nominee_address_line2" value="<?php echo set_value('address_line2');?>" required>
                           </div>
     </div>
   </div>
@@ -205,14 +205,14 @@
     <div class="col-md-6">
       <div class="reg-group">
                           <label for="last_name">City</label>
-                        <input type="text" class="form-control" id="city" placeholder="Enter city" name="city" value="<?php echo set_value('city');?>" required>
+                        <input type="text" class="form-control" id="nominee_city" placeholder="Enter city" name="nominee_city" value="<?php echo set_value('city');?>" required>
                         </div>
     </div>
     <div class="col-md-6">
       <div class="reg-group">
                           <label>State</label>
                            
-                          <input list="states" name="state" placeholder="State" class="form-control">
+                          <input list="states" id="nominee_state" name="nominee_state" placeholder="State" class="form-control">
   
                         </div>
     </div>
@@ -222,14 +222,14 @@
     <div class="col-md-6">
         <div class="reg-group">
                           <label for="postal_code">Postal Code</label>
-                        <input type="text" class="form-control" id="postal_code" placeholder="Enter Post Code" name="postal_code" value="<?php echo set_value('postal_code');?>"required>
+                        <input type="text" class="form-control" id="nominee_postal_code" placeholder="Enter Post Code" name="postal_code" value="<?php echo set_value('postal_code');?>"required>
                         </div>
     </div>
     <div class="col-md-6">
       <div class="reg-group">
                           <label>Country</label>
                            
-                          <input list="states" name="country" placeholder="country" class="form-control">
+                          <input list="states" id="nominee_country" name="nominee_country" placeholder="country" class="form-control">
   
                         </div>
     </div>
@@ -449,6 +449,24 @@
               $("#pIfP").text(60000);
 	            $("#pIeP").text(5000);
             }
+          }
+        });
+        $("#sameaddress_status").change(function (e) {
+          if($(this).is(':checked') == true){
+            $('#nominee_address_line1').val($('#address_line1').val());
+            $('#nominee_address_line2').val($('#address_line2').val());
+            $('#nominee_city').val($('#city').val());
+            $('#nominee_state').val($('#state').val());
+            $('#nominee_postal_code').val($('#postal_code').val());
+            $('#nominee_country').val($('#country').val());
+          }
+          else{
+            $('#nominee_address_line1').val('');
+            $('#nominee_address_line2').val('');
+            $('#nominee_city').val('');
+            $('#nominee_state').val('');
+            $('#nominee_postal_code').val('');
+            $('#nominee_country').val('');
           }
         });
     });
