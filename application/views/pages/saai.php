@@ -211,6 +211,9 @@ if (isset($this->session->userdata['log_in']))
     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#step2" role="tab" aria-controls="step2" aria-selected="false">Contact Details</a>
   </li>
   <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#step7" role="tab" aria-controls="step7" aria-selected="false">Nominee Details</a>
+  </li>
+  <li class="nav-item">
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#step3" role="tab" aria-controls="step3" aria-selected="false">ID Proofs</a>
   </li>
   <li class="nav-item">
@@ -266,6 +269,95 @@ if (isset($this->session->userdata['log_in']))
   <div class="tab-pane fade" id="step2" role="tabpanel" aria-labelledby="profile-tab">
         <h3 class="heading3">Contact Details</h3>
       <div class="row">
+    <div class="col">
+       <div class="reg-group">
+                          <label for="exampleInputEmail1">Phone Number</label>
+                        <input type="text" class="form-control" id="mobile" placeholder="Enter mobile number" name="user_mobile" value="<?php echo set_value('user_mobile');?>" required>
+                        </div>
+    </div>
+    <div class="col">
+      <div class="reg-group">
+                          <label for="exampleInputEmail1">Email ID</label>
+                        <input type="text" class="form-control" id="enduser_email" placeholder="Enter email id" name="user_email" value="<?php echo set_value('user_email');?>" required>
+                        </div>
+    </div>
+  </div>
+
+    <div class="row">
+    <div class="col">
+      <div class="reg-group">
+                          <label for="last_name">Address Line 1</label>
+                        <input type="text" class="form-control" id="address_line1" placeholder="Enter Address Line 1" name="address_line1" value="<?php echo set_value('address_line1');?>" required>
+                          </div>
+    </div>
+    <div class="col">
+     <div class="reg-group">
+                          <label for="last_name">Address Line 2</label>
+                        <input type="text" class="form-control" id="address_line2" placeholder="Enter Address Line 2" name="address_line2" value="<?php echo set_value('address_line2');?>" required>
+                          </div>
+    </div>
+  </div>
+    <div class="row">
+    <div class="col">
+      <div class="reg-group">
+                          <label for="last_name">City</label>
+                        <input type="text" class="form-control" id="city" placeholder="Enter city" name="city" value="<?php echo set_value('city');?>" required>
+                        </div>
+    </div>
+    <div class="col">
+      <div class="reg-group">
+                          <label>State</label>
+                           
+                          <input list="states" name="state" placeholder="State" class="form-control">
+  
+                        </div>
+    </div>
+  </div>
+
+    <div class="row">
+    <div class="col">
+        <div class="reg-group">
+                          <label for="postal_code">Postal Code</label>
+                        <input type="text" class="form-control" id="postal_code" placeholder="Enter Post Code" name="postal_code" value="<?php echo set_value('postal_code');?>"required>
+                        </div>
+    </div>
+    <div class="col">
+      <div class="reg-group">
+                          <label>Country</label>
+                            <input list="countries" name="country" placeholder="country" class="form-control">
+ 
+  
+                        </div>
+
+    </div>
+  </div>
+  </div>
+  <div class="tab-pane fade" id="step7" role="tabpanel" aria-labelledby="Nominee-tab">
+        <h3 class="heading3">Nominee Details</h3>
+      <div class="row">
+        <div class="col">
+      <div class="reg-group">
+                  <label for="first_name">First Name</label>
+                  <input type="text" class="form-control" placeholder="First name" id="first_name" name="first_name" value="<?php echo set_value('first_name');?>" /required>
+                </div>
+    </div>
+    <div class="col">
+      <div class="reg-group">
+                  <label for="last_name">Last Name</label>
+                  <input type="text" class="form-control" id="last_name" placeholder="Enter last Name" name="last_name" value="<?php echo set_value('last_name');?>">
+                </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col">
+      <div class="reg-group">
+                  <input type="checkbox" class="form-control" id="address_line1" placeholder="" name="address_line1" value="" style="width:100px;vertical-align: middle;display: inline-block;">
+                          <label for="last_name" style="vertical-align: middle;"">Same address</label>
+                        </div>
+    </div>
+  </div>
+    <div class="row">
     <div class="col">
        <div class="reg-group">
                           <label for="exampleInputEmail1">Phone Number</label>
