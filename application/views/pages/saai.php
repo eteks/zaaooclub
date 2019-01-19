@@ -651,8 +651,8 @@ if (isset($this->session->userdata['log_in']))
             $("#pSePV").val(500);
           }else if(packageValue == "north"){
             if(nTransValue == 1){
-              $("#pN1fP").text(12000);
-              $("#pN1fPV").val(12000);
+              $("#pN1fP").text(24000);
+              $("#pN1fPV").val(24000);
               $("#pN1eP").text(2000);
               $("#pN1ePV").val(2000);
             }else{
