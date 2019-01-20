@@ -81,7 +81,8 @@ class Pages extends CI_Controller
               array(
                      'field'   => 'last_name',
                      'label'   => 'Last Name',
-                     'rules'   => 'trim|required|min_length[3]|max_length[25]'
+                     // 'rules'   => 'trim|required|min_length[3]|max_length[25]'
+                     'rules'   => 'trim|required'
                   ),
                 array(
                      'field'   => 'user_dob',
@@ -97,12 +98,14 @@ class Pages extends CI_Controller
              array(
                      'field'   => 'user_mobile',
                      'label'   => 'Mobile',
-                     'rules'   => 'trim|required|min_length[10]|max_length[10]|is_unique[saai_users.user_mobile]'
+                     // 'rules'   => 'trim|required|min_length[10]|max_length[10]|is_unique[saai_users.user_mobile]'
+                     'rules'   => 'trim|required|min_length[10]|max_length[10]'
                   ), 
                 array(
                      'field'   => 'user_email',
                      'label'   => 'Email',
-                     'rules'   => 'trim|required|valid_email|is_unique[saai_users.user_email]'
+                     // 'rules'   => 'trim|required|valid_email|is_unique[saai_users.user_email]'
+                     'rules'   => 'trim|required|valid_email'
                   ), 
                            
           array(
@@ -113,7 +116,7 @@ class Pages extends CI_Controller
           array(
                      'field'   => 'address_line2',
                      'label'   => 'Address Line 2',
-                     'rules'   => 'trim|required'
+                     // 'rules'   => 'trim|required'
                   ),
           array(
                      'field'   => 'city',
@@ -133,7 +136,8 @@ class Pages extends CI_Controller
           array(
                      'field'   => 'aadhar_number',
                      'label'   => 'Aadhar Card Number',
-                     'rules'   => 'trim|required|min_length[12]|max_length[12]|is_unique[saai_users.aadhar_number]'
+                     // 'rules'   => 'trim|required|min_length[12]|max_length[12]|is_unique[saai_users.aadhar_number]'
+                     'rules'   => 'trim|required|min_length[12]|max_length[12]'
                   ),
               array(
                      'field'   => 'package',

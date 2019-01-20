@@ -304,7 +304,7 @@ class Users extends CI_Controller
             
             $validation_rules = array(
 
-		      array(
+               array(
                      'field'   => 'first_name',
                      'label'   => 'First Name',
                      'rules'   => 'trim|required|min_length[3]|max_length[25]'
@@ -312,7 +312,8 @@ class Users extends CI_Controller
               array(
                      'field'   => 'last_name',
                      'label'   => 'Last Name',
-                     'rules'   => 'trim|required|min_length[3]|max_length[25]'
+                     // 'rules'   => 'trim|required|min_length[3]|max_length[25]'
+                     'rules'   => 'trim|required'
                   ),
                 array(
                      'field'   => 'user_dob',
@@ -328,12 +329,14 @@ class Users extends CI_Controller
              array(
                      'field'   => 'user_mobile',
                      'label'   => 'Mobile',
-                     'rules'   => 'trim|required|min_length[10]|max_length[10]|is_unique[saai_users.user_mobile]'
+                     // 'rules'   => 'trim|required|min_length[10]|max_length[10]|is_unique[saai_users.user_mobile]'
+                     'rules'   => 'trim|required|min_length[10]|max_length[10]'
                   ), 
                 array(
                      'field'   => 'user_email',
                      'label'   => 'Email',
-                     'rules'   => 'trim|required|valid_email|is_unique[saai_users.user_email]'
+                     // 'rules'   => 'trim|required|valid_email|is_unique[saai_users.user_email]'
+                     'rules'   => 'trim|required|valid_email'
                   ), 
                            
           array(
@@ -344,7 +347,7 @@ class Users extends CI_Controller
           array(
                      'field'   => 'address_line2',
                      'label'   => 'Address Line 2',
-                     'rules'   => 'trim|required'
+                     // 'rules'   => 'trim|required'
                   ),
           array(
                      'field'   => 'city',
@@ -364,7 +367,8 @@ class Users extends CI_Controller
           array(
                      'field'   => 'aadhar_number',
                      'label'   => 'Aadhar Card Number',
-                     'rules'   => 'trim|required|min_length[12]|max_length[12]|is_unique[saai_users.aadhar_number]'
+                     // 'rules'   => 'trim|required|min_length[12]|max_length[12]|is_unique[saai_users.aadhar_number]'
+                     'rules'   => 'trim|required|min_length[12]|max_length[12]'
                   ),
               array(
                      'field'   => 'package',
@@ -379,8 +383,7 @@ class Users extends CI_Controller
                     array(
                      'field'   => 'image',
                      'label'   => 'Upload ID Copy',
-                     // 'rules'   => 'trim|required'
-                  //    //image
+                     //image
                   ),
                           array(
                      'field'   => 'payment',
@@ -388,8 +391,9 @@ class Users extends CI_Controller
                      'rules'   => 'trim|required'
                      //image
                   ),
-		     
-		    );
+           
+             
+            );
             $this->form_validation->set_rules($validation_rules);
             if ($this->form_validation->run() == FALSE) 
             {

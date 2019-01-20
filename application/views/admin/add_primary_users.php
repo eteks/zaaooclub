@@ -111,7 +111,7 @@
     <div class="col-md-6">
      <div class="reg-group">
                           <label for="last_name">Address Line 2</label>
-                        <input type="text" class="form-control" id="address_line2" placeholder="Enter Address Line 2" name="address_line2" value="<?php echo set_value('address_line2');?>" required>
+                        <input type="text" class="form-control" id="address_line2" placeholder="Enter Address Line 2" name="address_line2" value="<?php echo set_value('address_line2');?>">
                           </div>
     </div>
   </div>
@@ -197,7 +197,7 @@
     <div class="col-md-6">
      <div class="reg-group">
                           <label for="last_name">Address Line 2</label>
-                        <input type="text" class="form-control" id="nominee_address_line2" placeholder="Enter Address Line 2" name="nominee_address_line2" value="<?php echo set_value('address_line2');?>" required>
+                        <input type="text" class="form-control" id="nominee_address_line2" placeholder="Enter Address Line 2" name="nominee_address_line2" value="<?php echo set_value('address_line2');?>">
                           </div>
     </div>
   </div>
