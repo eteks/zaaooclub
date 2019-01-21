@@ -79,7 +79,7 @@ class Usersmodel extends CI_Model
 		//get list of adminusers from database using mysql query 
 		$this->db->select('*');
 		$this->db->from('saai_users');
-		$this->db->where('user_reg_by','admin');
+		//$this->db->where('user_reg_by','admin');
 		$this->db->order_by('user_createddate','desc');	
 		$query = $this->db->get();
 
