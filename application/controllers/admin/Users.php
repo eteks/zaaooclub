@@ -309,88 +309,88 @@ class Users extends CI_Controller
                      'label'   => 'First Name',
                      'rules'   => 'trim|required|min_length[3]|max_length[25]'
                   ),
-              array(
-                     'field'   => 'last_name',
-                     'label'   => 'Last Name',
-                     // 'rules'   => 'trim|required|min_length[3]|max_length[25]'
-                     'rules'   => 'trim|required'
-                  ),
-                array(
-                     'field'   => 'user_dob',
-                     'label'   => 'Date Of Birth',
-                     'rules'   => 'trim|required'
-                  ),
+        //       array(
+        //              'field'   => 'last_name',
+        //              'label'   => 'Last Name',
+        //              // 'rules'   => 'trim|required|min_length[3]|max_length[25]'
+        //              'rules'   => 'trim|required'
+        //           ),
+        //         array(
+        //              'field'   => 'user_dob',
+        //              'label'   => 'Date Of Birth',
+        //              'rules'   => 'trim|required'
+        //           ),
 
-              array(
-                     'field'   => 'gender',
-                     'label'   => 'Gender',
-                     'rules'   => 'trim|required'
-                  ),
-             array(
-                     'field'   => 'user_mobile',
-                     'label'   => 'Mobile',
-                     // 'rules'   => 'trim|required|min_length[10]|max_length[10]|is_unique[saai_users.user_mobile]'
-                     'rules'   => 'trim|required|min_length[10]|max_length[10]'
-                  ), 
-                array(
-                     'field'   => 'user_email',
-                     'label'   => 'Email',
-                     // 'rules'   => 'trim|required|valid_email|is_unique[saai_users.user_email]'
-                     'rules'   => 'trim|required|valid_email'
-                  ), 
+        //       array(
+        //              'field'   => 'gender',
+        //              'label'   => 'Gender',
+        //              'rules'   => 'trim|required'
+        //           ),
+        //      array(
+        //              'field'   => 'user_mobile',
+        //              'label'   => 'Mobile',
+        //              // 'rules'   => 'trim|required|min_length[10]|max_length[10]|is_unique[saai_users.user_mobile]'
+        //              'rules'   => 'trim|required|min_length[10]|max_length[10]'
+        //           ), 
+        //         array(
+        //              'field'   => 'user_email',
+        //              'label'   => 'Email',
+        //              // 'rules'   => 'trim|required|valid_email|is_unique[saai_users.user_email]'
+        //              'rules'   => 'trim|required|valid_email'
+        //           ), 
                            
-          array(
-                     'field'   => 'address_line1',
-                     'label'   => 'Address Line 1',
-                     'rules'   => 'trim|required'
-                  ),
-          array(
-                     'field'   => 'address_line2',
-                     'label'   => 'Address Line 2',
-                     // 'rules'   => 'trim|required'
-                  ),
-          array(
-                     'field'   => 'city',
-                     'label'   => 'City',
-                     'rules'   => 'trim|required'
-                  ),
-          array(
-                     'field'   => 'state',
-                     'label'   => 'State',
-                     'rules'   => 'trim|required'
-                  ),
-          array(
-                     'field'   => 'id_proof',
-                     'label'   => 'ID Proof',
-                     'rules'   => 'trim|required'
-                  ),
-          array(
-                     'field'   => 'aadhar_number',
-                     'label'   => 'Aadhar Card Number',
-                     // 'rules'   => 'trim|required|min_length[12]|max_length[12]|is_unique[saai_users.aadhar_number]'
-                     'rules'   => 'trim|required|min_length[12]|max_length[12]'
-                  ),
-              array(
-                     'field'   => 'package',
-                     'label'   => 'Package',
-                     'rules'   => 'trim|required'
-                  ),
-               array(
-                     'field'   => 'mode_of_transport',
-                     'label'   => 'Mode of Transport',
-                     'rules'   => 'trim|required'
-                  ),
-                    array(
-                     'field'   => 'image',
-                     'label'   => 'Upload ID Copy',
-                     //image
-                  ),
-                          array(
-                     'field'   => 'payment',
-                     'label'   => 'Payment',
-                     'rules'   => 'trim|required'
-                     //image
-                  ),
+        //   array(
+        //              'field'   => 'address_line1',
+        //              'label'   => 'Address Line 1',
+        //              'rules'   => 'trim|required'
+        //           ),
+        //   array(
+        //              'field'   => 'address_line2',
+        //              'label'   => 'Address Line 2',
+        //              // 'rules'   => 'trim|required'
+        //           ),
+        //   array(
+        //              'field'   => 'city',
+        //              'label'   => 'City',
+        //              'rules'   => 'trim|required'
+        //           ),
+        //   array(
+        //              'field'   => 'state',
+        //              'label'   => 'State',
+        //              'rules'   => 'trim|required'
+        //           ),
+        //   array(
+        //              'field'   => 'id_proof',
+        //              'label'   => 'ID Proof',
+        //              'rules'   => 'trim|required'
+        //           ),
+        //   array(
+        //              'field'   => 'aadhar_number',
+        //              'label'   => 'Aadhar Card Number',
+        //              // 'rules'   => 'trim|required|min_length[12]|max_length[12]|is_unique[saai_users.aadhar_number]'
+        //              'rules'   => 'trim|required|min_length[12]|max_length[12]'
+        //           ),
+        //       array(
+        //              'field'   => 'package',
+        //              'label'   => 'Package',
+        //              'rules'   => 'trim|required'
+        //           ),
+        //        array(
+        //              'field'   => 'mode_of_transport',
+        //              'label'   => 'Mode of Transport',
+        //              'rules'   => 'trim|required'
+        //           ),
+        //             array(
+        //              'field'   => 'image',
+        //              'label'   => 'Upload ID Copy',
+        //              //image
+        //           ),
+        //                   array(
+        //              'field'   => 'payment',
+        //              'label'   => 'Payment',
+        //              'rules'   => 'trim|required'
+        //              //image
+        //           ),
            
              
             );
@@ -501,7 +501,11 @@ class Users extends CI_Controller
                                 $this->form_validation->clear_field_data();
                                 $data['error_message'] = "User Added Successfully!";      
                             }
-                        }
+						}
+						else
+						{
+							$data['error_message'] = "User Added Successfully!";  
+						}
                         
                 }
                 else

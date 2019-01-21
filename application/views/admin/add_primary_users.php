@@ -53,7 +53,7 @@
     <div class="col-md-6">
       <div class="reg-group">
                   <label for="first_name">First Name*</label>
-                  <input type="text" class="form-control" placeholder="First name" id="first_name" name="first_name" value="<?php echo set_value('first_name');?>" /required>
+                  <input type="text" class="form-control" placeholder="First name" id="first_name" name="first_name" value="<?php echo set_value('first_name');?>" />
                 </div>
     </div>
     <div class="col-md-6">
@@ -70,12 +70,12 @@
                 <div class="reg-group">
                   <label for="exampleInputEmail1">Date Of Birth*</label>
                   <input type="text" class="form-control" id="user_dob" placeholder="Date of Birth" name="user_dob" value="<?php echo set_value('user_dob');?>">
-                </div required>
+                </div>
     </div>
     <div class="col-md-6">
       <div class="radio_option"><label>Gender*</label><br>
                   <label class="gender" >
-                  <input type="radio" class="option-input radio_button" name="gender"  value="male" checked /><span> Male</span>
+                  <input type="radio" class="option-input radio_button" name="gender"  value="male" /><span> Male</span>
                   </label>
                   <label class="gender">
                   <input type="radio" class="option-input radio_button" name="gender"  value="female" /><span> Female</span>
@@ -90,13 +90,13 @@
     <div class="col-md-6">
        <div class="reg-group">
                           <label for="exampleInputEmail1">Phone Number*</label>
-                        <input type="text" class="form-control" id="mobile" placeholder="Enter mobile number" name="user_mobile" value="<?php echo set_value('user_mobile');?>" required>
+                        <input type="text" class="form-control" id="mobile" placeholder="Enter mobile number" name="user_mobile" value="<?php echo set_value('user_mobile');?>">
                         </div>
     </div>
     <div class="col-md-6">
       <div class="reg-group">
                           <label for="exampleInputEmail1">Email ID*</label>
-                        <input type="text" class="form-control" id="enduser_email" placeholder="Enter email id" name="user_email" value="<?php echo set_value('user_email');?>" required>
+                        <input type="text" class="form-control" id="enduser_email" placeholder="Enter email id" name="user_email" value="<?php echo set_value('user_email');?>">
                         </div>
     </div>
   </div>
@@ -105,7 +105,7 @@
     <div class="col-md-6">
       <div class="reg-group">
                           <label for="last_name">Address Line 1*</label>
-                        <input type="text" class="form-control" id="address_line1" placeholder="Enter Address Line 1" name="address_line1" value="<?php echo set_value('address_line1');?>" required>
+                        <input type="text" class="form-control" id="address_line1" placeholder="Enter Address Line 1" name="address_line1" value="<?php echo set_value('address_line1');?>" >
                           </div>
     </div>
     <div class="col-md-6">
@@ -119,7 +119,7 @@
     <div class="col-md-6">
       <div class="reg-group">
                           <label for="last_name">City*</label>
-                        <input type="text" class="form-control" id="city" placeholder="Enter city" name="city" value="<?php echo set_value('city');?>" required>
+                        <input type="text" class="form-control" id="city" placeholder="Enter city" name="city" value="<?php echo set_value('city');?>">
                         </div>
     </div>
     <div class="col-md-6">
@@ -136,7 +136,7 @@
     <div class="col-md-6">
         <div class="reg-group">
                           <label for="postal_code">Postal Code</label>
-                        <input type="text" class="form-control" id="postal_code" placeholder="Enter Post Code" name="postal_code" value="<?php echo set_value('postal_code');?>"required>
+                        <input type="text" class="form-control" id="postal_code" placeholder="Enter Post Code" name="postal_code" value="<?php echo set_value('postal_code');?>">
                         </div>
     </div>
     <div class="col-md-6">
@@ -191,7 +191,7 @@
     <div class="col-md-6">
       <div class="reg-group">
                           <label for="last_name">Address Line 1</label>
-                        <input type="text" class="form-control" id="nominee_address_line1" placeholder="Enter Address Line 1" name="nominee_address_line1" value="<?php echo set_value('address_line1');?>" required>
+                        <input type="text" class="form-control" id="nominee_address_line1" placeholder="Enter Address Line 1" name="nominee_address_line1" value="<?php echo set_value('address_line1');?>">
                           </div>
     </div>
     <div class="col-md-6">
@@ -205,7 +205,7 @@
     <div class="col-md-6">
       <div class="reg-group">
                           <label for="last_name">City</label>
-                        <input type="text" class="form-control" id="nominee_city" placeholder="Enter city" name="nominee_city" value="<?php echo set_value('city');?>" required>
+                        <input type="text" class="form-control" id="nominee_city" placeholder="Enter city" name="nominee_city" value="<?php echo set_value('city');?>">
                         </div>
     </div>
     <div class="col-md-6">
@@ -222,7 +222,7 @@
     <div class="col-md-6">
         <div class="reg-group">
                           <label for="postal_code">Postal Code*</label>
-                        <input type="text" class="form-control" id="nominee_postal_code" placeholder="Enter Post Code" name="nominee_postal_code" value="<?php echo set_value('postal_code');?>"required>
+                        <input type="text" class="form-control" id="nominee_postal_code" placeholder="Enter Post Code" name="nominee_postal_code" value="<?php echo set_value('postal_code');?>">
                         </div>
     </div>
     <div class="col-md-6">
@@ -241,22 +241,22 @@
     <div class="col-md-6">
       <label class="gender">
 
-    <input class="option-input radio_button package_label" type="radio" name="id_proof"  value="aadhar" checked required />
+    <input class="option-input radio_button package_label" type="radio" name="id_proof"  value="aadhar"/>
     Aadhar Card
   </label>
   <label class="gender">
-    <input class="option-input radio_button" type="radio" name="id_proof"  value="license" required />
+    <input class="option-input radio_button" type="radio" name="id_proof"  value="license" />
     Driving License
   </label>
  
     </div>
     <div class="col-md-6">
        <label class="gender">
-    <input class="option-input radio_button" type="radio" name="id_proof"  value="passport" required />
+    <input class="option-input radio_button" type="radio" name="id_proof"  value="passport" />
     Passport
   </label>
     <label class="gender">
-    <input class="option-input radio_button" type="radio" name="id_proof"  value="ration_card" required />
+    <input class="option-input radio_button" type="radio" name="id_proof"  value="ration_card" />
     Ration Card
   </label>
     </div>
@@ -264,7 +264,7 @@
     <div class="row">
     <div class="col-md-6">
        <label class="gender">
-    <input class="option-input radio_button" type="radio" name="id_proof"  value="birth_certificate" required />
+    <input class="option-input radio_button" type="radio" name="id_proof"  value="birth_certificate" />
     Birth Certificate
   </label>
     </div></div>
@@ -272,7 +272,7 @@
     <div class="col-md-6">
       <div class="reg-group">
           <label>Upload ID Copy*</label>
-            <input type="file" name="image" required/>
+            <input type="file" name="image"/>
           </div>
     </div>
    <div class="col"></div>
@@ -344,8 +344,8 @@
 <label class="label_fun">Payment Option*</label>  
 
 ------------------------------------
- <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullSouth(this.checked)" name="payment"  value="val1" checked> Full Rs.<span id="pSfP"></span></label>
-  <label class="gender"><input type="radio" class="option-input radio_button" onchange="showemiSouth(this.checked)" name="payment"  value="val2" checked> EMI Rs.<span id="pSeP"></span></label>
+ <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullSouth(this.checked)" name="payment"  value="val1" > Full Rs.<span id="pSfP"></span></label>
+  <label class="gender"><input type="radio" class="option-input radio_button" onchange="showemiSouth(this.checked)" name="payment"  value="val2" > EMI Rs.<span id="pSeP"></span></label>
 </div>
 <div class="check"id="paymentNorth1" style="display: none;" >
 <label class="label_fun">Payment Option*</label>
@@ -356,14 +356,14 @@
 <div class="check"id="paymentNorth2" style="display: none;" >
 <label class="label_fun">Payment Option*</label>
 
-   <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullNorth2(this.checked)" name="payment"  value="value1" checked> Full Rs.<span id="pN2fP"></span></label>
-    <label class="gender"><input type="radio" onchange="showemiNorth2(this.checked)" class="option-input radio_button" name="payment"  value="value2" checked> EMI Rs.<span id="pN2eP"></span></label>
+   <label class="gender"><input type="radio" class="option-input radio_button" onchange="showfullNorth2(this.checked)" name="payment"  value="value1" > Full Rs.<span id="pN2fP"></span></label>
+    <label class="gender"><input type="radio" onchange="showemiNorth2(this.checked)" class="option-input radio_button" name="payment"  value="value2" > EMI Rs.<span id="pN2eP"></span></label>
   </div>
   <div class="check"id="paymentInter" style="display: none;" >
 <label class="label_fun">Payment Option*</label>
 
-   <label class="gender"><input type="radio" onchange="showfullInter(this.checked)" class="option-input radio_button" name="payment"  value="valu1" checked> Full Rs.<span id="pIfP"></span></label>
-    <label class="gender"><input type="radio" onchange="showemiInter(this.checked)" class="option-input radio_button" name="payment"  value="valu2" checked> EMI Rs.<span id="pIeP"></span></label>
+   <label class="gender"><input type="radio" onchange="showfullInter(this.checked)" class="option-input radio_button" name="payment"  value="valu1" > Full Rs.<span id="pIfP"></span></label>
+    <label class="gender"><input type="radio" onchange="showemiInter(this.checked)" class="option-input radio_button" name="payment"  value="valu2" > EMI Rs.<span id="pIeP"></span></label>
   </div>
     </div>
     <div class="col">
